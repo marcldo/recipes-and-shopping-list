@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  showRecipes: boolean = true;
+  navClickEvent(data) {
+    data === 'recipes' ? (this.showRecipes = true) : (this.showRecipes = false);
+  }
+}
